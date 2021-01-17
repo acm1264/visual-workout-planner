@@ -10,6 +10,6 @@ This web application, hosted at (LINK TO BE PROVIDED ONCE ESTABLISHED), is desig
 The exercise details are stored in a custom database our team designed using (TO BE DETERMINED). 
 
 ## Setup
-The react app for the website is located inside the folder "visual-workout-planner". To run the website locally, npm will be required, which can be downloaded from [here](https://www.npmjs.com/get-npm).
+To run the Rreact web app locally, npm will be required, which can be downloaded from [here](https://www.npmjs.com/get-npm).
 <br>
-With npm installed, cd into the "visual-workout-planner" folder and run the command `npm start` to setup a locally running build.
+With npm installed, run the command `npm start` to setup a locally running build.
