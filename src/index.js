@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import About from './About';
-import MuscleStructures from './MuscleStructures';
+import MuscleStructuresContainer from './MuscleStructuresContainer';
 import ExerciseDisplay from './ExerciseDisplay';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <About />
-    <MuscleStructures />
+    <MuscleStructuresContainer />
     <ExerciseDisplay />
   </React.StrictMode>,
   document.getElementById('root')

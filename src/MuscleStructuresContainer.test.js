@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import MuscleStructures from './MuscleStructures';
+import MuscleStructuresContainer from './MuscleStructuresContainer';
 
 ////////////placeholder test
 test('Placeholder Test', () => {
-    render(<MuscleStructures />);
+    render(<MuscleStructuresContainer />);
     const linkElement = screen.getByText(/Muscle Structures/i);
     expect(linkElement).toBeInTheDocument();
   });
