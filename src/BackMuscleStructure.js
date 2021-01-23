@@ -4,8 +4,16 @@ import React from "react";
 //To simplify the process of making each svg muscle image line up correct on the website, we combined them all into a single file and
 //converted it into one master component containing all the svg
 
+
+
 function BackMuscleStructure()
 {
+    function MuscleOnClick(muscleName)
+    {
+        alert(muscleName);
+        // console.log("clicked " + muscleName);
+    }
+
     return (
         <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -193,7 +201,7 @@ function BackMuscleStructure()
             </g>
             <g
             id="ForearmMuscle_B"
-            onclick="temp"
+            onClick={() => {MuscleOnClick("forearm")}}
             transform="translate(-14.65 24.373)"
             >
             <path
