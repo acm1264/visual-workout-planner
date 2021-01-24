@@ -1,8 +1,15 @@
 import './MuscleStructuresContainer.css';
 import BackMuscleStructure from './BackMuscleStructure'
 
+export const MuscleOnClick = (muscleName) =>
+{
+    alert(muscleName);
+    console.log("clicked " + muscleName);
+}
+
 //this file contains the setup for the muscle structures, including the SVG elements and clicking them
-function MuscleStructuresContainer() {
+const MuscleStructuresContainer = () => 
+{
   return (
     <div className="MuscleStructuresContainer">
         <h1>
@@ -14,3 +21,4 @@ function MuscleStructuresContainer() {
 }
 
 export default MuscleStructuresContainer;
+

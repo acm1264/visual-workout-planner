@@ -1,4 +1,5 @@
 import React from "react";
+import MuscleOnClick from './MuscleStructuresContainer';
 
 //this component contains the conversion of our back-combined-muscle-strucutre.svg into a react component using https://svg2jsx.com/
 //To simplify the process of making each svg muscle image line up correct on the website, we combined them all into a single file and
@@ -8,11 +9,7 @@ import React from "react";
 
 function BackMuscleStructure()
 {
-    function MuscleOnClick(muscleName)
-    {
-        alert(muscleName);
-        // console.log("clicked " + muscleName);
-    }
+    
 
     return (
         <svg
