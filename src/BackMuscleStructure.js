@@ -5,12 +5,16 @@ import MuscleOnClick from './MuscleStructuresContainer';
 //To simplify the process of making each svg muscle image line up correct on the website, we combined them all into a single file and
 //converted it into one master component containing all the svg
 
+// const MuscleOnClick = (muscleName) =>
+// {
+//     alert(muscleName);
+//     console.log("clicked " + muscleName);
+// }
+
 
 
 function BackMuscleStructure()
 {
-    
-
     return (
         <svg
         xmlns="http://www.w3.org/2000/svg"

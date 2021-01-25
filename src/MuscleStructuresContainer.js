@@ -1,5 +1,9 @@
 import './MuscleStructuresContainer.css';
 import BackMuscleStructure from './BackMuscleStructure'
+import FrontMuscleStructure from './FrontMuscleStructure'
+import HeartMuscleStructure from './HeartMuscleStructure'
+
+
 
 export const MuscleOnClick = (muscleName) =>
 {
@@ -12,10 +16,12 @@ const MuscleStructuresContainer = () =>
 {
   return (
     <div className="MuscleStructuresContainer">
-        <h1>
-            Muscle Structures
+        
+            
+            <FrontMuscleStructure />
+            <HeartMuscleStructure />
             <BackMuscleStructure />
-        </h1>
+        
     </div>
   );
 }
