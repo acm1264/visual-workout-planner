@@ -5,11 +5,11 @@ import HeartMuscleStructure from './HeartMuscleStructure'
 
 
 
-export const MuscleOnClick = (muscleName) =>
-{
-    alert(muscleName);
-    console.log("clicked " + muscleName);
-}
+// export const MuscleOnClick = (muscleName) =>
+// {
+//     alert(muscleName);
+//     console.log("clicked " + muscleName);
+// }
 
 //this file contains the setup for the muscle structures, including the SVG elements and clicking them
 const MuscleStructuresContainer = () => 
