@@ -1,20 +1,13 @@
 import React from "react";
-//import MuscleOnClick from './MuscleStructuresContainer';
+import MuscleStructure from "./MuscleStructure"; 
 
 //this component contains the conversion of our back-combined-muscle-strucutre.svg into a react component using https://svg2jsx.com/
 //To simplify the process of making each svg muscle image line up correct on the website, we combined them all into a single file and
 //converted it into one master component containing all the svg
 
-// const MuscleOnClick = (muscleName) =>
-// {
-//     alert(muscleName);
-//     console.log("clicked " + muscleName);
-// }
-
-
-
-function HeartMuscleStructure()
+class HeartMuscleStructure extends MuscleStructure
 {
+  render(){
     return (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +17,12 @@ function HeartMuscleStructure()
           version="1.1"
           viewBox="0 0 42.028 30.168"
         >
-          <g id="layer1" transform="translate(-53.415 -106.78)">
+          {/* Heart Muscle */}
+          <g 
+          id="HeartMuscle" 
+          onClick={() => {this.MuscleOnClick("Heart")}}
+          transform="translate(-53.415 -106.78)"
+          >
             <path
               id="path2109"
               fill="#fff"
@@ -38,6 +36,7 @@ function HeartMuscleStructure()
           </g>
         </svg>
       );
+    }
 }
 
 export default HeartMuscleStructure;
