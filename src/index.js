@@ -5,12 +5,14 @@ import About from './About';
 import MuscleStructuresContainer from './MuscleStructuresContainer';
 import ExerciseDisplay from './ExerciseDisplay';
 import reportWebVitals from './reportWebVitals';
+import DBAccess from './DBAccess';
 
 ReactDOM.render(
   <React.StrictMode>
     <About />
     <MuscleStructuresContainer />
     <ExerciseDisplay />
+    <DBAccess />
   </React.StrictMode>,
   document.getElementById('root')
 );
