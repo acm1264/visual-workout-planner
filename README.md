@@ -5,6 +5,7 @@
 * [App Functionality](#app-functionality)
 * [File Organization](#file-organization)
 * [React Testing](#react-testing)
+* [Working with Netlify and FaudaDB Database](#working-with-netlify-and-faudadb-database)
 ## About
 The visual workout planner is a single-page React web application made by Andrew Maurice, Tram Doan, Chad Bealer, Jeremy Choyce, and Caitlin Burke. This app is the team's 2021 Senior Capstone project.
 
@@ -17,8 +18,20 @@ The exercise details are stored in a custom database our team designed using (TO
 ## Setup
 1. To run the React web app locally, npm will be required, which can be downloaded from [here](https://www.npmjs.com/get-npm).
 2. With npm installed, run the command `npm install` to setup any necessary dependencies (this only needs to be done the first time the code is pulled from Github to setup certain files). 
-3. Run `npm start` to setup a locally running build at any time. While working on code, you can run this command and leave it running in the terminal. With it running, every time you save a file, it will automatically update the running version in your browser.
+3. To run the react app locally WITHOUT database, use `npm start`, else `netlify dev`* to establish FaunaDB connection.While working on code, you can run this command and leave it running in the terminal. With it running, every time you save a file, it will automatically update the running version in your browser. NOTE: some files, like package.json, require the command to be re-run for changes to apply properly
 4. To setup new changes for being deployed for visibility to anyone looking at the website, run `npm run build` to create a build of the current project.
+
+*The netilfy command requires additional setup to get access to the DB. Because access requires password info, it will not be listed on here. The following commands will need to be run in order to get everything setup if you have the account info:
+```
+npm i -g netlify-cli
+netlify login
+
+npm i -g fauna-shell
+fauna cloud-login
+
+netlify addons:create fauna
+netlify addons:auth fauna
+```
 
 ## App Functionality
 PLACEHOLDER
@@ -44,3 +57,13 @@ Categories of files:
 ## React Testing
 Testing is setup using Jest where any files with the extension `.spec.js` or `test.js` can contain unit tests. Unit tests for the entire system can be run with the command `npm test`.
 - Currently, only a default test is setup under `App.test.js` as an example.
+
+## Working with Netlify and FaudaDB Database
+Below are some means of working in react code with the Database hosted on FaunaDB.
+### Add Function
+To add a function to the code, run `netlify functions:create name` where "name" is the name of the function. This will prompt you with beign able to make the file form a template. You can then find the file to edit in the "functions" directory. The follow import lines of code MUST be at the top of the file:
+```
+const faunadb = require('faunadb');
+const faunaClient = new faunadb.Client({ secret: process.env.FAUNADB_SERVER_SECRET });
+const q = faunadb.query;
+```
