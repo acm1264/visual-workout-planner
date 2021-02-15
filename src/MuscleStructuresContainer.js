@@ -16,8 +16,6 @@ const MuscleStructuresContainer = () =>
 {
   return (
     <div className="MuscleStructuresContainer">
-        
-            
             <FrontMuscleStructure />
             <HeartMuscleStructure />
             <BackMuscleStructure />

@@ -31,7 +31,7 @@ class BackMuscleStructure extends MuscleStructure
                 ></path>
                 {/* Back Muscle  */}
                 <g 
-                id="BackMuscle" 
+                className="BackMuscle MuscleInactive" 
                 onClick={() => {this.MuscleOnClick("Back")}}
                 transform="translate(-39.79 2.234)"
                 >
@@ -53,7 +53,7 @@ class BackMuscleStructure extends MuscleStructure
                 </g>
                 {/* Shoulder Muscle */}
                 <g 
-                id="ShoulderMuscle" 
+                className="ShoulderMuscle MuscleInactive" 
                 onClick={() => {this.MuscleOnClick("Shoulder")}}
                 transform="translate(-9.036 .622)"
                 >
@@ -90,7 +90,7 @@ class BackMuscleStructure extends MuscleStructure
                 </g>
                 {/* Glute Muscle */}
                 <g 
-                id="GluteMuscle" 
+                className="GluteMuscle MuscleInactive" 
                 onClick={() => {this.MuscleOnClick("Glute")}}
                 transform="translate(-81.187 32.465)"
                 >
@@ -112,7 +112,7 @@ class BackMuscleStructure extends MuscleStructure
                 </g>
                 {/* Hamstring Muscle */}
                 <g 
-                id="HamstringMuscle" 
+                className="HamstringMuscle MuscleInactive" 
                 onClick={() => {this.MuscleOnClick("Hamstring")}}
                 transform="translate(-45.032 24.195)"
                 >
@@ -151,7 +151,7 @@ class BackMuscleStructure extends MuscleStructure
                 </g>
                 {/* Tricep Muscle */}
                 <g 
-                id="TricepMuscle" 
+                className="TricepMuscle MuscleInactive" 
                 onClick={() => {this.MuscleOnClick("Tricep")}}
                 transform="translate(-13.028 14.363)"
                 >
@@ -188,7 +188,7 @@ class BackMuscleStructure extends MuscleStructure
                 </g>
                 {/* Calf Muscle */}
                 <g 
-                id="CalfMuscle" 
+                className="CalfMuscle MuscleInactive" 
                 onClick={() => {this.MuscleOnClick("Calf")}}
                 transform="translate(-30.857 -5.177)"
                 >
@@ -227,7 +227,7 @@ class BackMuscleStructure extends MuscleStructure
                 </g>
                 {/* Forearm Muscle */}
                 <g
-                id="ForearmMuscle"
+                className="ForearmMuscle MuscleInactive"
                 onClick={() => {this.MuscleOnClick("Forearm")}}
                 transform="translate(-14.65 24.373)"
                 >

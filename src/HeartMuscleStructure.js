@@ -19,7 +19,7 @@ class HeartMuscleStructure extends MuscleStructure
         >
           {/* Heart Muscle */}
           <g 
-          id="HeartMuscle" 
+          className="HeartMuscle MuscleInactive" 
           onClick={() => {this.MuscleOnClick("Heart")}}
           transform="translate(-53.415 -106.78)"
           >

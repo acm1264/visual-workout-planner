@@ -29,9 +29,9 @@ netlify login
 npm i -g fauna-shell
 fauna cloud-login
 
-netlify addons:create fauna
-netlify addons:auth fauna
+netlify init
 ```
+When running `netlify init`, request it to use the site hosted at the repo in order to establish the connection properly.
 
 ## App Functionality
 PLACEHOLDER
