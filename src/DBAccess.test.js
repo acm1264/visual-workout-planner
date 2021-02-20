@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { render, screen } from '@testing-library/react';
 import { unmountComponentAtNode } from "react-dom";
-import About from './About';
+import DBAccess from './DBAccess';
 
 let container = null;
 beforeEach(() => {
@@ -15,8 +15,14 @@ afterEach(() => {
     container = null;
 });
 
-test('the About information is displayed on the webpage', () => {
-   render(<About />);
-   const linkElement = screen.getByText(/^.*?\bVisual Workout Planner\b.*?$/m);
-   expect(linkElement).toBeInTheDocument();
+test('DB Access placeholder test', () => {
+    expect(true).toBeTruthy();
+});
+
+test('DB Access placeholder POST test', () => {
+    expect(false).toBeFalsy();
+});
+
+test('DB Access placeholder GET test', () => {
+    expect(true).not.toBeFalsy();
 });
