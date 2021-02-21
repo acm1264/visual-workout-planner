@@ -1,10 +1,20 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, ShallowRenderer } from '@testing-library/react';
 import ExerciseDisplay from './ExerciseDisplay';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-////////////placeholder test
-test('Placeholder Test', () => {
-    // render(<ExerciseDisplay />);
-    // const linkElement = screen.getByText(/Exercise Display/i);
-    // expect(linkElement).toBeInTheDocument();
-    expect(true).toBeTruthy();
-  });
+
+
+it('renders without crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(<ExerciseDisplay />, div);
+  ReactDOM.unmountComponentAtNode(div);
+});
+
+
+
+
+  
+  
+
+ 

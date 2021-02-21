@@ -1,10 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import MuscleStructuresContainer from './MuscleStructuresContainer';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-////////////placeholder test
-test('Placeholder Test', () => {
-    // render(<MuscleStructuresContainer />);
-    // const linkElement = screen.getByText(/Muscle Structures/i);
-    // expect(linkElement).toBeInTheDocument();
-    expect(true).toBeTruthy();
-  });
+it('renders without crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(<MuscleStructuresContainer />, div);
+  ReactDOM.unmountComponentAtNode(div);
+});
+  
