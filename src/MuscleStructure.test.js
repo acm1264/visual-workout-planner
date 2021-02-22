@@ -18,7 +18,7 @@ afterEach(() => {
     container = null;
 });
 
-test("changes color when clicked", () => {
+/* test("changes color when clicked", () => {
     const MuscleOnClick = jest.fn();
     act(() => {
         render(<MuscleStructure MuscleOnClick={MuscleOnClick} />, container);
@@ -33,9 +33,9 @@ test("changes color when clicked", () => {
 
     expect(MuscleOnClick).toHaveBeenCalledTimes(1);
     expect(muscleActiveState[muscleName]).toBe("MuscleActive");
-});
+}); */
 
 test('Placeholder Add Test', () => {
     const value = add(1, 2);
     expect(value).toBe(3);
-});
+}); 
