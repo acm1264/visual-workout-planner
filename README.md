@@ -59,16 +59,16 @@ Testing is setup using Jest where any files with the extension `.spec.js` or `te
 - Currently, only a default test is setup under `App.test.js` as an example.
 
 ## Behavior Testing with Cucumber
-- Set up
-Use 'npm install cucumber' to install the cucumber modules
-Use 'npm install selenium-webdriver' to install selenium for browser automation
-Check that chromedriver.exe is in directory of files and is the current version
-- File Locations
+- Set up:
+Use 'npm install cucumber' to install the cucumber modules.
+Use 'npm install selenium-webdriver' to install selenium for browser automation.
+Check that chromedriver.exe is in directory of files and is the current version.
+- File Locations:
 Feature Files written in Gherkin are located under the features folder.
 Step Definitions for each feature file is located in the stepDefinition folder. 
-- To run tests
-Use '.\node_modules\.bin\cucumber-js .\features' to run all tests in terminal
-Use '.\node_modules\.bin\cucumber-js .\features\Filename.feature' to run one specific test in terminal
+- To run tests:
+Use '.\node_modules\.bin\cucumber-js .\features' to run all tests in terminal.
+Use '.\node_modules\.bin\cucumber-js .\features\Filename.feature' to run one specific test in terminal.
 
 ## Working with Netlify and FaudaDB Database
 Below are some means of working in react code with the Database hosted on FaunaDB.
