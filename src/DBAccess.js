@@ -13,7 +13,12 @@ function DBAccess()
     const { error, message } = await resp.json();
     error ? console.error(error) : console.log(message);
   }
+
   const handleThoughtChange = e => setThought({ ...thought, [e.target.name]: e.target.value});
+
+  //const handleThoughtChange = (event) => {
+   // setThought(event.target.value);
+  //}
 
 
 
@@ -27,8 +32,6 @@ function DBAccess()
     }
     const memCard = (m, i) => <div key={i}>{m.data.text}</div>
     const renderExercises = exercises ? exercises.map(memCard) : <button onClick={getExercises}>Show exercises</button>
-
-    
 
 
   

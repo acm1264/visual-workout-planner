@@ -1,28 +1,39 @@
 import React, { useState } from "react";
-import { render, screen } from '@testing-library/react';
+import ReactDOM from 'react-dom';
+import { render, fireEvent, queryByPlaceholderText } from '@testing-library/react';
 import { unmountComponentAtNode } from "react-dom";
 import DBAccess from './DBAccess';
 
-let container = null;
-beforeEach(() => {
-    container = document.createElement("div");
-    document.body.appendChild(container);
+
+it("renders without crashing", () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<DBAccess />, div);
+    ReactDOM.unmountComponentAtNode(div);
 });
 
-afterEach(() => {
-    unmountComponentAtNode(container);
-    container.remove();
-    container = null;
+
+//Makes sure that the "Your Thought" textbox has nothing in it once starting
+it("Textbox check", () => {
+    render(<DBAccess />);
+    var input = document.getElementsByName("text")[0].value;
+    expect(input).toBe("");
+
 });
 
-test('DB Access placeholder test', () => {
-    expect(true).toBeTruthy();
-});
 
-test('DB Access placeholder POST test', () => {
-    expect(false).toBeFalsy();
-});
+it("Matches date format length ", ()=> {
+    render(<DBAccess />);
+    var date = document.getElementsByName("date")[0].value;
+    expect(date.length).toBe(10);
 
-test('DB Access placeholder GET test', () => {
-    expect(true).not.toBeFalsy();
 });
+    
+
+
+    
+    
+
+
+
+
+

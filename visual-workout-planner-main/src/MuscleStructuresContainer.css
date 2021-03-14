@@ -1,0 +1,12 @@
+.MuscleStructuresContainer
+{
+    text-align: center;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 65px;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+}
