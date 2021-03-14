@@ -67,7 +67,7 @@ Check that chromedriver.exe is in directory of files and is the current version.
 Feature Files written in Gherkin are located under the features folder.
 Step Definitions for each feature file is located in the stepDefinition folder. 
 - To run tests:
-Use `.\node_modules\.bin\cucumber-js .\features` to run all tests in terminal.
+Use `.\node_modules\.bin\cucumber-js .\features` to run all tests in terminal. (`./node_modules/.bin/cucumber-js ./features` Linux)
 Use `.\node_modules\.bin\cucumber-js .\features\Filename.feature` to run one specific test in terminal.
 
 ## Working with Netlify and FaudaDB Database
