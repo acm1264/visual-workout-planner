@@ -14,18 +14,13 @@ import "@testing-library/jest-dom";
   });
 
 
-  it("runs correctly", () =>{
-    render(<BackMuscleStructure />);
-    let inputs = document.getElementById('layer1').lastElementChild.text;
-    console.log(inputs);
+ 
 
   
 
   
     
-    
-
-  });
+   
 
   
 
