@@ -1,0 +1,35 @@
+/* all muscle structure subclasses share this parent css such that they can have the same classes for muscles that
+are the same between teh structures (like the shoulder that are on both structures */
+
+/* .ShoulderMuscle-Inactive
+{
+    
+}
+
+.ShoulderMuscle-Inactive:hover
+{
+    fill: green;
+}
+
+.ShoulderMuscle-Active
+{
+    
+    display: "hide";
+} */
+
+.MuscleActive
+{
+    fill: green;
+}
+
+.MuscleInactive:hover{
+    fill: red;
+}
+
+.MuscleInactive
+{
+    fill: blue;
+}
+
+
+

@@ -272,9 +272,13 @@ class BackMuscleStructure extends MuscleStructure
                 ></path>
                 </g>
             </g>
-            </svg>
+            </svg>            
+            
             );
+
      }
+     
+
 }
 
 export default BackMuscleStructure;
