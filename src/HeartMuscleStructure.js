@@ -23,6 +23,7 @@ class HeartMuscleStructure extends MuscleStructure
           onClick={() => {this.MuscleOnClick("Heart")}}
           transform="translate(-53.415 -106.78)"
           >
+            <title id="unique id">Heart</title>
             <path
               id="path2109"
               fill="#fff"
