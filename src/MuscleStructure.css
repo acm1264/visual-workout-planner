@@ -4,15 +4,19 @@ are the same between teh structures (like the shoulder that are on both structur
 
 .MuscleActive
 {
-    fill: green;
+    fill: #2dc937;
+}
+
+.MuscleActive:hover {
+    fill: #e7b416;
 }
 
 .MuscleInactive:hover {
-    fill: red;
+    fill: #e7b416;
 }
 
 .MuscleInactive {
-    fill: blue;
+    fill: #cc3232;
 }
 
 
