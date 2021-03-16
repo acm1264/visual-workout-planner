@@ -35,7 +35,7 @@ class BackMuscleStructure extends MuscleStructure
                 onClick={() => {this.MuscleOnClick("Back")}}
                 transform="translate(-39.79 2.234)"
                 >
-                <title id="unique id">Back</title>
+                <title id="unique id">Back </title>
                 <path
                     id="path935"
                     stroke="#000"
@@ -58,7 +58,7 @@ class BackMuscleStructure extends MuscleStructure
                 onClick={() => {this.MuscleOnClick("Shoulder")}}
                 transform="translate(-9.036 .622)"
                 >
-                <title id="unique id">Shoulders</title>
+                <title id="unique id"> Shoulders </title>
                 <path
                     id="path897"
                     stroke="#000"
@@ -96,7 +96,7 @@ class BackMuscleStructure extends MuscleStructure
                 onClick={() => {this.MuscleOnClick("Glute")}}
                 transform="translate(-81.187 32.465)"
                 >
-                <title id="unique id">Glutes</title>
+                <title id="unique id"> Glutes </title>
                 <path
                     id="path997"
                     stroke="#000"
@@ -119,7 +119,7 @@ class BackMuscleStructure extends MuscleStructure
                 onClick={() => {this.MuscleOnClick("Hamstring")}}
                 transform="translate(-45.032 24.195)"
                 >
-                <title id="unique id">Hamstrings</title>
+                <title id="unique id"> Hamstrings </title>
                 <path
                     id="path1025"
                     stroke="#000"
@@ -159,7 +159,7 @@ class BackMuscleStructure extends MuscleStructure
                 onClick={() => {this.MuscleOnClick("Tricep")}}
                 transform="translate(-13.028 14.363)"
                 >
-                <title id="unique id">Triceps</title>
+                <title id="unique id"> Triceps </title>
                 <path
                     id="path963"
                     stroke="#000"
@@ -197,7 +197,7 @@ class BackMuscleStructure extends MuscleStructure
                 onClick={() => {this.MuscleOnClick("Calf")}}
                 transform="translate(-30.857 -5.177)"
                 >
-                <title id="unique id">Calves</title>
+                <title id="unique id"> Calves </title>
                 <path
                     id="path2828"
                     stroke="#000"
@@ -237,7 +237,7 @@ class BackMuscleStructure extends MuscleStructure
                 onClick={() => {this.MuscleOnClick("Forearm")}}
                 transform="translate(-14.65 24.373)"
                 >
-                <title id="unique id">Forearms</title>
+                <title id="unique id"> Forearms</title>
                 <path
                     id="path2790"
                     stroke="#000"
