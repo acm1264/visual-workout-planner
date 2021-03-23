@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 // import DBAccess from './DBAccess';
 import './MuscleStructure.css';
 
@@ -17,7 +17,7 @@ export const GetExercises = async (muscleName) =>
     let exercisesToReturn = [];
     data.forEach(exerciseObject => 
     {
-        if(exerciseObject.data.Primary_Muscle_Name == muscleName)
+        if(exerciseObject.data.Primary_Muscle_Name === muscleName)
         {
             exercisesToReturn.push(exerciseObject.data);
         }
