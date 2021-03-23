@@ -14,7 +14,7 @@ const handler = async (event) =>
   try 
   {
     //////////////////////////placeholder return all shoulder exercises
-    const req = await faunaClient.query(q.Map(q.Paginate(q.Match(q.Index("all_shoulder_ex"))), q.Lambda("attr", q.Get(q.Var("attr")))))
+    const req = await faunaClient.query(q.Map(q.Paginate(q.Match(q.Index("Exercise_Name"))), q.Lambda("attr", q.Get(q.Var("attr")))))
     return { statusCode: 200, body: JSON.stringify(req.data) }
   } 
   catch (err) 

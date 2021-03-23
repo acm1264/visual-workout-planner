@@ -35,8 +35,8 @@ class FrontMuscleStructure extends MuscleStructure
           ></path>
           {/* Bicep Muscle */}
           <g 
-          className="BicepMuscle MuscleInactive" 
-          onClick={() => {this.MuscleOnClick("Bicep")}}
+          className="BicepsMuscle MuscleInactive" 
+          onClick={() => {this.MuscleOnClick("Biceps")}}
           strokeWidth="0.287">
           <title id="unique id">Biceps </title>
             <path
@@ -116,8 +116,8 @@ class FrontMuscleStructure extends MuscleStructure
           </g>
           {/* Quad Muscle */}
           <g
-            className="QuadMuscle MuscleInactive"
-            onClick={() => {this.MuscleOnClick("Quad")}}
+            className="QuadsMuscle MuscleInactive"
+            onClick={() => {this.MuscleOnClick("Quads")}}
             strokeWidth="0.265"
             transform="matrix(.98239 0 0 .94935 3.748 -8.517)"
           >
@@ -133,8 +133,8 @@ class FrontMuscleStructure extends MuscleStructure
           </g>
           {/* Shoulder Muscle */}
           <g
-            className="ShoulderMuscle MuscleInactive"
-            onClick={() => {this.MuscleOnClick("Shoulder")}}
+            className="ShouldersMuscle MuscleInactive"
+            onClick={() => {this.MuscleOnClick("Shoulders")}}
             strokeWidth="0.265"
             transform="translate(7.398 -22.249)"
           >

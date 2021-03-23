@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+
 function DBAccess()
 {
   //////////////////////////////placeholder test POST
@@ -22,16 +23,22 @@ function DBAccess()
 
 
 
+
+
   ////////////////////////////////placeholder test GET
   const [exercises, setExercises] = useState()
 
-    const getExercises = async () => {
-      const resp = await fetch('/api/get-muscle-ex-data')
-      const data = await resp.json()
-      setExercises(data)
-    }
-    const memCard = (m, i) => <div key={i}>{m.data.text}</div>
-    const renderExercises = exercises ? exercises.map(memCard) : <button onClick={getExercises}>Show exercises</button>
+  const getExercises = async () => {
+    const resp = await fetch('/api/get-muscle-ex-data')
+    const data = await resp.json()
+    // console.log(data);
+    setExercises(data)
+  }
+
+
+  //display the primary muscle of each of hte exercises in the database as a placeholdery thing
+  const memCard = (m, i) => <div key={i}>{m.data.Primary_Muscle_Name}</div>
+  const renderExercises = exercises ? exercises.map(memCard) : <button onClick={getExercises}>Show exercises</button>
 
 
   

@@ -54,8 +54,8 @@ class BackMuscleStructure extends MuscleStructure
                 </g>
                 {/* Shoulder Muscle */}
                 <g 
-                className="ShoulderMuscle MuscleInactive" 
-                onClick={() => {this.MuscleOnClick("Shoulder")}}
+                className="ShouldersMuscle MuscleInactive" 
+                onClick={() => {this.MuscleOnClick("Shoulders")}}
                 transform="translate(-9.036 .622)"
                 >
                 <title id="unique id"> Shoulders </title>
@@ -92,8 +92,8 @@ class BackMuscleStructure extends MuscleStructure
                 </g>
                 {/* Glute Muscle */}
                 <g 
-                className="GluteMuscle MuscleInactive" 
-                onClick={() => {this.MuscleOnClick("Glute")}}
+                className="GlutesMuscle MuscleInactive" 
+                onClick={() => {this.MuscleOnClick("Glutes")}}
                 transform="translate(-81.187 32.465)"
                 >
                 <title id="unique id"> Glutes </title>
@@ -115,8 +115,8 @@ class BackMuscleStructure extends MuscleStructure
                 </g>
                 {/* Hamstring Muscle */}
                 <g 
-                className="HamstringMuscle MuscleInactive" 
-                onClick={() => {this.MuscleOnClick("Hamstring")}}
+                className="HamstringsMuscle MuscleInactive" 
+                onClick={() => {this.MuscleOnClick("Hamstrings")}}
                 transform="translate(-45.032 24.195)"
                 >
                 <title id="unique id"> Hamstrings </title>
@@ -155,8 +155,8 @@ class BackMuscleStructure extends MuscleStructure
                 </g>
                 {/* Tricep Muscle */}
                 <g 
-                className="TricepMuscle MuscleInactive" 
-                onClick={() => {this.MuscleOnClick("Tricep")}}
+                className="TricepsMuscle MuscleInactive" 
+                onClick={() => {this.MuscleOnClick("Triceps")}}
                 transform="translate(-13.028 14.363)"
                 >
                 <title id="unique id"> Triceps </title>
