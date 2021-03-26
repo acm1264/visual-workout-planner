@@ -1,6 +1,7 @@
 import React from 'react';
-// import DBAccess from './DBAccess';
 import './MuscleStructure.css';
+
+import {SetExercisesOnDisplay} from './ExerciseDisplay';
 
 //////////////test function called add delete me
 export const add = (x, y) => x+y;
@@ -57,8 +58,7 @@ export class MuscleStructure extends React.Component
 
         console.log(muscleName);
         let exercises = await GetExercises(muscleName);
-        console.log("exercises: ")
-        console.log(exercises);
+        SetExercisesOnDisplay(exercises);
     };    
 
     //function called after teh state of a msucle is changed to active or inactive to replace the active css class with teh
@@ -77,5 +77,12 @@ export class MuscleStructure extends React.Component
         // a.forEach( x => x.className += (muscleActiveState[muscleName] ? " MuscleActive" : " MuscleInactive"));
         // a.forEach( x => x.classList.remove((muscleActiveState[muscleName] ? "MuscleInactive" : "MuscleActive")) );
     };
+
+    // render(){
+    //     return (
+    //         <div></div>
+    //       // <FrontMuscleStructure toggleBoxes={this.toggleBoxes} />
+        
+    //     );}
 };
 export default MuscleStructure;
