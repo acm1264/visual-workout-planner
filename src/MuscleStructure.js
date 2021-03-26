@@ -1,7 +1,7 @@
 import React from 'react';
 import './MuscleStructure.css';
 
-import {SetExercisesOnDisplay} from './ExerciseDisplay';
+import {SetExercisesOnDisplay,RemoveExercisesOnDisplay} from './ExerciseDisplay';
 
 //////////////test function called add delete me
 export const add = (x, y) => x+y;
@@ -28,37 +28,32 @@ export const GetExercises = async (muscleName) =>
     return exercisesToReturn;
 }
 
-
-
 //muscles are shared between muslce structures in some cases. Because of this, this shared variable
 //will have whether or not each muscle is actively displaying exercie info or not so that if a muscle 
 //shared between multiple structures is clicked, the state will be kept consistent
 let muscleActiveState = {dict: {'Shoulder': false, 'Heart': false}};
 
-// function GetExercisesFromDB(muscleName)
-// {
-//     const [exercises, setExercises] = useState();
-//     const getExercises = async () => 
-//     {
-//         const resp = await fetch('/api/get-muscle-ex-data')
-//         const data = await resp.json()
-//         setExercises(data)
-//     }
-// }
-
 export class MuscleStructure extends React.Component
 {
     MuscleOnClick = async (muscleName) =>
     {
-        console.log("clicked " + muscleName + " is currenly " + muscleActiveState[muscleName]);
+        // console.log("clicked " + muscleName + " is currenly " + muscleActiveState[muscleName]);
         muscleActiveState[muscleName] = !muscleActiveState[muscleName];
-        console.log("...now it is " + muscleActiveState[muscleName]);
+        // console.log("...now it is " + muscleActiveState[muscleName]);
 
+        // changes the color of muscles
         this.ReplaceCSSClass(muscleName);
 
-        console.log(muscleName);
-        let exercises = await GetExercises(muscleName);
-        SetExercisesOnDisplay(exercises);
+        // console.log(muscleName);
+        if (muscleActiveState[muscleName]) 
+        {
+            let exercises = await GetExercises(muscleName);
+            SetExercisesOnDisplay(exercises);
+        }
+        else
+        {
+            RemoveExercisesOnDisplay(muscleName);
+        }
     };    
 
     //function called after teh state of a msucle is changed to active or inactive to replace the active css class with teh

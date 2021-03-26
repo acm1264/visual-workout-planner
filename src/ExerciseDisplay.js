@@ -8,6 +8,22 @@ export const SetExercisesOnDisplay = (exercisesToConcat) =>
 {
   exercisesOnDisplay = exercisesOnDisplay.concat(exercisesToConcat);
   window.exerciseDisplayCompnent.TriggerUpdateDisplay();
+  console.log(exercisesOnDisplay);
+}
+
+export const RemoveExercisesOnDisplay = (muscleToRemove) =>
+{
+  var i = exercisesOnDisplay.length;
+  while (i--)
+  {
+    if (exercisesOnDisplay[i].Primary_Muscle_Name === muscleToRemove)
+    {
+      // console.log(exercisesOnDisplay[i]);
+      exercisesOnDisplay.splice(i,1);
+    }
+  }
+  window.exerciseDisplayCompnent.TriggerUpdateDisplay();
+   
 }
 
 
