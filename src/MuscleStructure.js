@@ -1,20 +1,15 @@
 import React from 'react';
 import './MuscleStructure.css';
-
 import {SetExercisesOnDisplay,RemoveExercisesOnDisplay} from './ExerciseDisplay';
 
-//////////////test function called add delete me
-export const add = (x, y) => x+y;
 
-// export const [exercises, setExercises] = useState();
 export const GetExercises = async (muscleName) =>
 {
-    // const [exercises, setExercises] = useState();
-    const resp = await fetch('/api/get-muscle-ex-data')
-    const data = await resp.json()
-    console.log(data);// data;
-    // setExercises(data)
+    //fetch all exercise data using api call
+    const resp = await fetch('/api/get-muscle-ex-data');
+    const data = await resp.json();
 
+    //only keep the exercises where the primary muscle name matches the muscleName specified
     let exercisesToReturn = [];
     data.forEach(exerciseObject => 
     {
@@ -22,7 +17,6 @@ export const GetExercises = async (muscleName) =>
         {
             exercisesToReturn.push(exerciseObject.data);
         }
-        // console.log(exerciseObject.data.Primary_Muscle_Name);
         
     });
     return exercisesToReturn;
@@ -37,14 +31,14 @@ export class MuscleStructure extends React.Component
 {
     MuscleOnClick = async (muscleName) =>
     {
-        // console.log("clicked " + muscleName + " is currenly " + muscleActiveState[muscleName]);
+        //toggle the muscle active state
         muscleActiveState[muscleName] = !muscleActiveState[muscleName];
-        // console.log("...now it is " + muscleActiveState[muscleName]);
 
         // changes the color of muscles
         this.ReplaceCSSClass(muscleName);
 
-        // console.log(muscleName);
+        //process either adding exercise data from teh database if the muscle is now active, else go
+        //remove the existing exercise info for the specified muscle
         if (muscleActiveState[muscleName]) 
         {
             let exercises = await GetExercises(muscleName);
@@ -66,18 +60,7 @@ export class MuscleStructure extends React.Component
             console.log("muslce active now = " + muscleActiveState[muscleName]);
             a[i].classList.remove((muscleActiveState[muscleName] ? "MuscleInactive" : "MuscleActive"));
             a[i].classList.add(muscleActiveState[muscleName] ? "MuscleActive" : "MuscleInactive");
-            
         }
-        // a.forEach(x => console.log(x));
-        // a.forEach( x => x.className += (muscleActiveState[muscleName] ? " MuscleActive" : " MuscleInactive"));
-        // a.forEach( x => x.classList.remove((muscleActiveState[muscleName] ? "MuscleInactive" : "MuscleActive")) );
     };
-
-    // render(){
-    //     return (
-    //         <div></div>
-    //       // <FrontMuscleStructure toggleBoxes={this.toggleBoxes} />
-        
-    //     );}
 };
 export default MuscleStructure;

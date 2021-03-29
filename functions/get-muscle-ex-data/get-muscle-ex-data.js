@@ -13,7 +13,7 @@ const handler = async (event) =>
 
   try 
   {
-    //////////////////////////placeholder return all shoulder exercises
+    //returns all exercises in the exercise database, where the code in react will parse through to get only what it needs
     const req = await faunaClient.query(q.Map(q.Paginate(q.Match(q.Index("Exercise_Name"))), q.Lambda("attr", q.Get(q.Var("attr")))))
     return { statusCode: 200, body: JSON.stringify(req.data) }
   } 

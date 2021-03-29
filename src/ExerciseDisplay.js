@@ -1,46 +1,48 @@
 import React from 'react';
 import './ExerciseDisplay.css';
 
-
+//as exercises are retrieved from the DB, they are placed inside this array. All exercises in this array willl be displayed in a box
 let exercisesOnDisplay = [];
 
+//add all given exercise data to the exercisesOnDisplay arry and trigger the ExerciseDisplay renderer to be updated
 export const SetExercisesOnDisplay = (exercisesToConcat) =>
 {
   exercisesOnDisplay = exercisesOnDisplay.concat(exercisesToConcat);
   window.exerciseDisplayCompnent.TriggerUpdateDisplay();
-  console.log(exercisesOnDisplay);
 }
 
 export const RemoveExercisesOnDisplay = (muscleToRemove) =>
 {
   var i = exercisesOnDisplay.length;
+
+  //go through the displayed exercises backwards in order to remove all exercises with the given exercise name
   while (i--)
   {
     if (exercisesOnDisplay[i].Primary_Muscle_Name === muscleToRemove)
     {
-      // console.log(exercisesOnDisplay[i]);
       exercisesOnDisplay.splice(i,1);
     }
   }
   window.exerciseDisplayCompnent.TriggerUpdateDisplay();
-   
 }
 
 
 //this file contains the top-level information for the app, being the content about what the app is and 
 //how to use it that is located at the top of the app
-export default class ExerciseDisplay extends React.Component 
-// export default function ExerciseDisplay()
+export default class ExerciseDisplay extends React.Component
 {
 
-  constructor(){
+  constructor()
+  {
     super();
+    //setup the exercise dipslay instance ot be globally accessable so that the renderer can be forced to update when
+    //exercises are added/removed to the outside array
     window.exerciseDisplayCompnent = this;
   }
 
+  //force the rendered to be updated so it takes into account added/removed exercises
   TriggerUpdateDisplay = () =>
   {
-    console.log("trigger update here");
     this.forceUpdate();
   }
 
