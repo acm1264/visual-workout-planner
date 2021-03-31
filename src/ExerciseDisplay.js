@@ -57,7 +57,7 @@ export default class ExerciseDisplay extends React.Component
           //so the name of the exercise was chosen 
           <div>
             <div className={[exercise.Primary_Muscle_Name + "Muscle", "ExerciseBox"].join(' ')} key={exercise.Exercise_Name}>
-              <h1><img src="dumbellFavicon_16x16px.png" id="dumbell1"/> {exercise.Exercise_Name} <img src="dumbellFavicon_16x16px.png" id="dumbell2"/></h1>
+              <h1><img src="dumbellFavicon_16x16px.png" alt="dumbell 1"/> {exercise.Exercise_Name} <img src="dumbellFavicon_16x16px.png" alt="dumbell 2"/></h1>
               <p id="muscle">{exercise.Primary_Muscle_Name}</p>
               <p><span id="info">Description: </span>{exercise.Description}</p>
               <p><span id="info">Helpful Tips: </span> {exercise.Form_Tips}</p>
