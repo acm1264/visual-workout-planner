@@ -54,12 +54,15 @@ export default class ExerciseDisplay extends React.Component
           //for each exercise, add the exercise box class to keep the display consistent, as well as the class for the specific
           //primary muscle that is being used to allow for easily removing boxes (may not be needed??????? because may be able to 
           //simply just remove them form the array and this auto-updates). Key msut be unique for each leemnet in react list,
-          //so the name of the exercise was chosen
-          <div className={[exercise.Primary_Muscle_Name + "Muscle", "ExerciseBox"].join(' ')} key={exercise.Exercise_Name}>
-            <p>{exercise.Exercise_Name}</p>
-            <p>{exercise.Description}</p>
-            <p>{exercise.Form_Tips}</p>
-          </div>
+          //so the name of the exercise was chosen 
+          <div>
+            <div className={[exercise.Primary_Muscle_Name + "Muscle", "ExerciseBox"].join(' ')} key={exercise.Exercise_Name}>
+              <h1><img src="dumbellFavicon_16x16px.png" id="dumbell1"/> {exercise.Exercise_Name} <img src="dumbellFavicon_16x16px.png" id="dumbell2"/></h1>
+              <p id="muscle">{exercise.Primary_Muscle_Name}</p>
+              <p><span id="info">Description: </span>{exercise.Description}</p>
+              <p><span id="info">Helpful Tips: </span> {exercise.Form_Tips}</p>
+            </div>
+          </div>  
         ))}
       </div>
     );}
