@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import About from './About';
 import MuscleStructuresContainer from './MuscleStructuresContainer';
+import MuscleDropdown from './MuscleDropdown';
 import ExerciseDisplay from './ExerciseDisplay';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <About />
+    <MuscleDropdown />
     <MuscleStructuresContainer />
     <ExerciseDisplay />
-  </React.StrictMode>,
+    </React.StrictMode>,
   document.getElementById('root')
 );
 
