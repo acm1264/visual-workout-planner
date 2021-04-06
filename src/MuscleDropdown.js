@@ -8,6 +8,10 @@ const MuscleDropdown = () =>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
                     Muscles
                 </Dropdown.Toggle>
+<<<<<<< HEAD
+=======
+
+>>>>>>> b7056d340467914c80b574530c1f73b997c557a6
                 <Dropdown.Menu>
                     <Dropdown.Item as="button">Abs</Dropdown.Item>
                     <Dropdown.Item as="button">Back</Dropdown.Item>
