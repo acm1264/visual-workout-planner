@@ -1,3 +1,4 @@
+import React from 'react';
 import './About.css';
 
 //this file contains the top-level information about the app, including what the app is and 
@@ -16,5 +17,8 @@ function About() {
     </div>
   );
 }
+// Memoization is for executing a function once, and then saving the result in memory. If the function is executed
+// again with the same arguments as before, it will just return the previously saved result from the first function's execution without executing the function again
+export const MemoizedAbout = React.memo(About);
 
 export default About;

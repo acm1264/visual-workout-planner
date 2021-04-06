@@ -23,6 +23,9 @@ export const GetExercises = async (muscleName) =>
     return exercisesToReturn;
 }
 
+// Memoize Get Exercise
+export const MemoizedGetExercise = React.memo(GetExercises);
+
 //muscles are shared between muslce structures in some cases. Because of this, this shared variable
 //will have whether or not each muscle is actively displaying exercie info or not so that if a muscle 
 //shared between multiple structures is clicked, the state will be kept consistent

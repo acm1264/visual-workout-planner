@@ -11,6 +11,9 @@ export const SetExercisesOnDisplay = (exercisesToConcat) =>
   window.exerciseDisplayCompnent.TriggerUpdateDisplay();
 }
 
+// Memoize Set ExerciseDisplay
+export const MemoizedSetExercisesOnDisplay = React.memo(SetExercisesOnDisplay);
+
 export const RemoveExercisesOnDisplay = (muscleToRemove) =>
 {
   var i = exercisesOnDisplay.length;
@@ -25,6 +28,9 @@ export const RemoveExercisesOnDisplay = (muscleToRemove) =>
   }
   window.exerciseDisplayCompnent.TriggerUpdateDisplay();
 }
+
+// Memoize RemoveExerciseDisplay
+export const MemoizedRemoveExercisesOnDisplay = React.memo(RemoveExercisesOnDisplay);
 
 
 //this file contains the top-level information for the app, being the content about what the app is and 
