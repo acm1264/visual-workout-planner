@@ -16,6 +16,7 @@ export const GetExercises = async (muscleName) =>
         if(exerciseObject.data.Primary_Muscle_Name === muscleName)
         {
             exercisesToReturn.push(exerciseObject.data);
+            
         }
         
     });
