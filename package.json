@@ -10,6 +10,7 @@
     "cucumber": "^6.0.5",
     "fauna-shell": "^0.12.2",
     "faunadb": "^4.0.3",
+    "jquery": "^3.6.0",
     "netlify-cli": "^3.8.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",

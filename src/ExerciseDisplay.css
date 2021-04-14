@@ -1,3 +1,13 @@
+/* the master holder of all exercise boxes */
+#ExerciseBoxContainer
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100vw;
+}
+
 .ExerciseBox
 {
     background-color: white;
@@ -5,18 +15,22 @@
     padding:0;
     border: 3px red solid;
     white-space: normal;
+    width: 30vw;
 }
 
-.ExerciseBox h1
+@media screen and (max-width: 700px) {
+    .ExerciseBox {
+      width: 45vw;
+    }
+  }
 
+.ExerciseBox h1
 {
     text-align: center;
-    line-height: 0;
-
+    font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1100 - 500)));
 }
 
 .ExerciseBox p 
-
 {
     text-align: center;
     font-size: 18px;
@@ -26,7 +40,7 @@
     
 }
 
-#muscle
+.muscleNameInBox
 {
     color: red;
     font-weight: bold;
@@ -35,12 +49,20 @@
 
 }
 
-#info 
+.contentInBoxTitle
 {
     color: red;
     font-size: 20px;
-    line-height: 0;
+}
 
+.contentInBox
+{
+    display: block;
+}
+
+.hideContentInBox
+{
+    display: none !important;
 }
 
 

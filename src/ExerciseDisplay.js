@@ -1,5 +1,6 @@
 import React from 'react';
 import './ExerciseDisplay.css';
+import $ from 'jquery';
 
 //as exercises are retrieved from the DB, they are placed inside this array. All exercises in this array willl be displayed in a box
 let exercisesOnDisplay = [];
@@ -52,10 +53,18 @@ export default class ExerciseDisplay extends React.Component
     this.forceUpdate();
   }
 
+  //certain elements inside the boxes are kept hidden unless the user presses a button for displaying them. Clicking the button will
+  //add/remove the class from that element to hide/show the content
+  ToggleContentVisibility = (buttonClicked) =>
+  {
+    //using jquery, the button will have the content as its sibling with the "contentInBox" class, so toggle the hidden class on it
+    $(buttonClicked.target).siblings(".contentInBox").toggleClass("hideContentInBox");
+  }
+
 
   render(){
     return (
-      <div>
+      <div id="ExerciseBoxContainer">
         {exercisesOnDisplay.map(exercise => (
           //for each exercise, add the exercise box class to keep the display consistent, as well as the class for the specific
           //primary muscle that is being used to allow for easily removing boxes (may not be needed??????? because may be able to 
@@ -64,9 +73,10 @@ export default class ExerciseDisplay extends React.Component
           <div>
             <div className={[exercise.Primary_Muscle_Name + "Muscle", "ExerciseBox"].join(' ')} key={exercise.Exercise_Name}>
               <h1><img src="dumbellFavicon_16x16px.png" alt="dumbell 1"/> {exercise.Exercise_Name} <img src="dumbellFavicon_16x16px.png" alt="dumbell 2"/></h1>
-              <p id="muscle">{exercise.Primary_Muscle_Name}</p>
-              <p><span id="info">Description: </span>{exercise.Description}</p>
-              <p><span id="info">Helpful Tips: </span> {exercise.Form_Tips}</p>
+              <p className="muscleNameInBox">{exercise.Primary_Muscle_Name}</p>
+              
+              <p><button className="contentInBoxTitle" onClick={this.ToggleContentVisibility.bind(this)}>Description: </button> <div className="contentInBox hideContentInBox">{exercise.Description}</div></p>
+              <p><button className="contentInBoxTitle" onClick={this.ToggleContentVisibility.bind(this)}>Helpful Tips: </button> <div className="contentInBox hideContentInBox">{exercise.Form_Tips}</div></p>
             </div>
           </div>  
         ))}
