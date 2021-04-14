@@ -1,27 +1,74 @@
 import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
+import MuscleStructure from './MuscleStructure.js';
 
-const MuscleDropdown = () =>
+class MuscleDropdown extends MuscleStructure
 {
+    render() {
         return (
             <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
                     Muscles
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                    <Dropdown.Item as="button">Abs</Dropdown.Item>
-                    <Dropdown.Item as="button">Back</Dropdown.Item>
-                    <Dropdown.Item as="button">Biceps</Dropdown.Item>
-                    <Dropdown.Item as="button">Calves</Dropdown.Item>
-                    <Dropdown.Item as="button">Chest</Dropdown.Item>
-                    <Dropdown.Item as="button">Forearms</Dropdown.Item>
-                    <Dropdown.Item as="button">Glutes</Dropdown.Item>
-                    <Dropdown.Item as="button">Hamstrings</Dropdown.Item>
-                    <Dropdown.Item as="button">Quads</Dropdown.Item>
-                    <Dropdown.Item as="button">Shoulders</Dropdown.Item>
-                    <Dropdown.Item as="button">Triceps</Dropdown.Item>
+                    <Dropdown.Item as="button">
+                        <div onClick={() => this.MuscleOnClick("Abs")}>
+                            Abs
+                        </div>
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button">
+                        <div onClick={() => this.MuscleOnClick("Back")}>
+                            Back
+                        </div>
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button">
+                        <div onClick={() => this.MuscleOnClick("Biceps")}>
+                            Biceps
+                        </div>
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button">
+                        <div onClick={() => this.MuscleOnClick("Calves")}>
+                            Calves
+                        </div>
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button">
+                        <div onClick={() => this.MuscleOnClick("Chest")}>
+                            Chest
+                        </div>
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button">
+                        <div onClick={() => this.MuscleOnClick("Forearms")}>
+                            Forearms
+                        </div>
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button">
+                        <div onClick={() => this.MuscleOnClick("Glutes")}>
+                            Glutes
+                        </div>
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button">
+                        <div onClick={() => this.MuscleOnClick("Hamstrings")}>
+                            Hamstrings
+                        </div>
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button">
+                        <div onClick={() => this.MuscleOnClick("Quads")}>
+                            Quads
+                        </div>
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button">
+                        <div onClick={() => this.MuscleOnClick("Shoulders")}>
+                            Shoulders
+                        </div>
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button">
+                        <div onClick={() => this.MuscleOnClick("Triceps")}>
+                            Triceps
+                        </div>
+                    </Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
         );
+    }
 };
 export default MuscleDropdown;
