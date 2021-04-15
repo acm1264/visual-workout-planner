@@ -1,12 +1,12 @@
 import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import MuscleStructure from './MuscleStructure.js';
-import { useChecklist } from 'react-checklist';
+//import { useChecklist } from 'react-checklist';
 
 class MuscleDropdown extends MuscleStructure
 {
     render() {
-        const data = [
+       /* const data = [
             { _id: 1, label: 'item 1' },
             { _id: 2, label: 'item 2' },
             { _id: 3, label: 'item 3' },
@@ -15,10 +15,11 @@ class MuscleDropdown extends MuscleStructure
         const { handleCheck, isCheckedAll, checkedItems } = useChecklist(data, {
             key: '_id',
             keyType: 'number',
-        });
+        });*/
 
         return (
-            <><Dropdown>
+           // <>
+                <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
                     Muscles
                 </Dropdown.Toggle>
@@ -81,7 +82,7 @@ class MuscleDropdown extends MuscleStructure
                 </Dropdown.Menu>
             </Dropdown>
 
-                <ul>
+            /* <ul>
                     <li>
                         <input
                             type="checkbox"
@@ -100,7 +101,7 @@ class MuscleDropdown extends MuscleStructure
                             <label>{v.label}</label>
                         </li>
                     ))}
-                </ul></>
+                </ul></>*/
         );
     }
 };
