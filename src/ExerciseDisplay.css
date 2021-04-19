@@ -20,43 +20,51 @@
 
 @media screen and (max-width: 700px) {
     .ExerciseBox {
-      width: 45vw;
+      width: 70vw;
     }
   }
 
+  /* the exercise name */
 .ExerciseBox h1
 {
+    color:black;
     text-align: center;
-    font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1100 - 500)));
+    font-size: min(30px, 5vw);
 }
 
+/* all of the text under the exercise name */
 .ExerciseBox p 
 {
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
     margin-left: 20px;
     margin-right: 20px;
-    
 }
 
+/* the muscle name of exercise */
 .muscleNameInBox
 {
     color: red;
     font-weight: bold;
-    font-size: 24px;
+    text-align: center;
+    font-size: min(20px, 4.5vw);
     line-height: 0;
 
 }
 
+/* the textbox of description and helpful tips */
 .contentInBoxTitle
 {
-    color: red;
-    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+    color: rgb(54, 54, 54);
+    font-size: min(20px, 4vw);
 }
 
+/* the information in the description and helpful tips */
 .contentInBox
 {
+    font-size: min(18px, 3.5vw);
+    font-weight: normal;
+    color: black;
     display: block;
 }
 
@@ -64,5 +72,4 @@
 {
     display: none !important;
 }
-
 
