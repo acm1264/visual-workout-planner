@@ -7,12 +7,16 @@ are the same between teh structures (like the shoulder that are on both structur
     fill: #2dc937;
 }
 
+@media (hover:hover){
 .MuscleActive:hover {
     fill: #e7b416;
 }
+}
 
+@media (hover:hover){
 .MuscleInactive:hover {
     fill: #e7b416;
+}
 }
 
 .MuscleInactive {
