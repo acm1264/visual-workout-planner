@@ -62,21 +62,42 @@ export default class ExerciseDisplay extends React.Component
   }
 
 
+
   render(){
     return (
       <div id="ExerciseBoxContainer">
+
+        {/* functionality for the checklist options is inside the exercise box display so it can be used by the display to
+        update what content is/is not shown */}
+        <div>
+          <label>
+            <input type="checkbox" name="Stretches" />
+            Stretches
+          </label>
+
+          <label>
+            <input type="checkbox" name="Stretches" />
+            Non-Stretches
+          </label>
+        </div>
+
+
         {exercisesOnDisplay.map(exercise => (
           //for each exercise, add the exercise box class to keep the display consistent, as well as the class for the specific
           //primary muscle that is being used to allow for easily removing boxes (may not be needed??????? because may be able to 
           //simply just remove them form the array and this auto-updates). Key msut be unique for each leemnet in react list,
           //so the name of the exercise was chosen 
-          <div>
+
+          //exercise should be hidden entirely (given the hideContentInBox class) if it is a stretch and the checkbox for stretches is
+          //deactivated, or same thing for non-stretches
+          <div /*className={`${(exercise.Is_Stretch && ) ? "hideContentInBox" : ""}`*/>
             <div className={[exercise.Primary_Muscle_Name + "Muscle", "ExerciseBox"].join(' ')} key={exercise.Exercise_Name}>
               <h1><img src="dumbellFavicon_16x16px.png" alt="dumbell 1"/> {exercise.Exercise_Name} <img src="dumbellFavicon_16x16px.png" alt="dumbell 2"/></h1>
               <p className="muscleNameInBox">{exercise.Primary_Muscle_Name}</p>
               
               <p><button className="contentInBoxTitle" onClick={this.ToggleContentVisibility.bind(this)}>Description: </button> <div className="contentInBox hideContentInBox">{exercise.Description}</div></p>
               <p><button className="contentInBoxTitle" onClick={this.ToggleContentVisibility.bind(this)}>Helpful Tips: </button> <div className="contentInBox hideContentInBox">{exercise.Form_Tips}</div></p>
+              <p><button className="contentInBoxTitle" onClick={this.ToggleContentVisibility.bind(this)}>Video: </button> <div className="contentInBox hideContentInBox">{exercise.Video}</div></p>
             </div>
           </div>  
         ))}
