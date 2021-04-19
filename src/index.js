@@ -6,12 +6,14 @@ import MuscleStructuresContainer from './MuscleStructuresContainer';
 import MuscleDropdown from './MuscleDropdown';
 import ExerciseDisplay from './ExerciseDisplay';
 import reportWebVitals from './reportWebVitals';
+import ExerciseChecklist from './ExerciseChecklist';
 
 ReactDOM.render(
   <React.StrictMode>
     <About />
     <MuscleDropdown />
     <MuscleStructuresContainer />
+    <ExerciseChecklist />
     <ExerciseDisplay />
     </React.StrictMode>,
   document.getElementById('root')
