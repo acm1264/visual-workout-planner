@@ -11,7 +11,7 @@ class MuscleDropdown extends MuscleStructure
                     Muscles
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                    <Dropdown.Header>Front</Dropdown.Header>
+                    <Dropdown.Header>Front Muscles</Dropdown.Header>
                     <Dropdown.Item as="button">
                         <div onClick={() => this.MuscleOnClick("Abs")}>
                             Abs
@@ -38,9 +38,9 @@ class MuscleDropdown extends MuscleStructure
                         </div>
                     </Dropdown.Item>
                     <Dropdown.Divider />
-                    <Dropdown.Header>Back</Dropdown.Header>
+                    <Dropdown.Header>Back Muscles</Dropdown.Header>
                     <Dropdown.Item as="button">
-                        <div onClick={() => this.MuscleOnClick("Back")}>
+                        <div data-testid="back" onClick={() => this.MuscleOnClick("Back")}>
                             Back
                         </div>
                     </Dropdown.Item>

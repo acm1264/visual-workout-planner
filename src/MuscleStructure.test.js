@@ -1,9 +1,11 @@
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
+import exercisesOnDisplay from './ExerciseDisplay'
 
 import MuscleStructure from "./MuscleStructure";
 import muscleActiveState from "./MuscleStructure";
 const {GetExercises} = require("./MuscleStructure");
+
 
 let container = null;
 beforeEach(() => {
