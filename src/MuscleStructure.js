@@ -1,6 +1,6 @@
 import React from 'react';
 import './MuscleStructure.css';
-import {SetExercisesOnDisplay,RemoveExercisesOnDisplay} from './ExerciseDisplay';
+import {SetExercisesOnDisplay,RemoveExercisesOnDisplay, scrollToExercise} from './ExerciseDisplay';
 
 
 export const GetExercises = async (muscleName) =>
@@ -47,6 +47,7 @@ export class MuscleStructure extends React.Component
         {
             let exercises = await GetExercises(muscleName);
             SetExercisesOnDisplay(exercises);
+            scrollToExercise();
         }
         else
         {
