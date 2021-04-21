@@ -36,6 +36,27 @@ export const RemoveExercisesOnDisplay = (muscleToRemove) =>
 // Memoize RemoveExerciseDisplay
 export const MemoizedRemoveExercisesOnDisplay = React.memo(RemoveExercisesOnDisplay);
 
+// find position of element on page
+function findPos(obj) {
+  var curtop = 0;
+  if (obj.offsetParent) {
+      do {
+          curtop += obj.offsetTop;
+      } while (obj === obj.offsetParent);
+  return [curtop];
+  }
+}
+
+// scroll to the element
+export const scrollToExercise = () =>
+{
+  window.scrollTo({
+        top: findPos(document.getElementById("Checkboxes"))-450,
+        left: 0, 
+        behavior: 'smooth',
+    })
+}
+
 
 //this file contains the top-level information for the app, being the content about what the app is and 
 //how to use it that is located at the top of the app
@@ -76,14 +97,13 @@ export default class ExerciseDisplay extends React.Component
     this.forceUpdate();
   }
 
-
   render(){
     return (
       <div>
 
         {/* functionality for the checklist options is inside the exercise box display so it can be used by the display to
         update what content is/is not shown */}
-        <div>
+        <div id="Checkboxes">
           <label>
             <input type="checkbox" name="Stretches" checked={showStretches} onClick={this.ToggleStretchDisplay.bind()}/>
             Stretches
@@ -111,7 +131,7 @@ export default class ExerciseDisplay extends React.Component
                 
                 <p><button className="contentInBoxTitle" onClick={this.ToggleContentVisibility.bind(this)}>Description: </button> <div className="contentInBox hideContentInBox">{exercise.Description}</div></p>
                 <p><button className="contentInBoxTitle" onClick={this.ToggleContentVisibility.bind(this)}>Helpful Tips: </button> <div className="contentInBox hideContentInBox">{exercise.Form_Tips}</div></p>
-                <p><button className="contentInBoxTitle" onClick={this.ToggleContentVisibility.bind(this)}>Video: </button> <div className="contentInBox hideContentInBox">{exercise.Video}</div></p>
+                <p><button className="contentInBoxTitle" onClick={this.ToggleContentVisibility.bind(this)}>Video: </button> <div className="contentInBox hideContentInBox"><iframe title="Video" width="420" height="315" src={exercise.Video} id="Video"/></div></p>
               </div>
             </div>  
           ))}
