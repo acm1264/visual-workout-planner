@@ -11,11 +11,18 @@
 .ExerciseBox
 {
     background-color: white;
-    margin: 20px;
-    padding:0;
-    border: 3px red solid;
+    margin-top: 20px;
+    margin-left: 10px;
+
+    padding: 0px 10px 20px;
+    border: 3px black solid;
     white-space: normal;
     width: 35vw;
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 80%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media screen and (max-width: 700px) {
@@ -42,7 +49,7 @@
 /* the muscle name of exercise */
 .muscleNameInBox
 {
-    color: red;
+    color: #cc3232;
     font-weight: bold;
     text-align: center;
     font-size: min(20px, 4.5vw);
@@ -64,9 +71,13 @@
 {
     font-size: min(18px, 3.5vw);
     font-weight: normal;
+    text-align: center;
     color: black;
     display: block;
     word-wrap:break-word;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hideContentInBox
@@ -74,8 +85,68 @@
     display: none !important;
 }
 
-#Video
+.video
 {
     width: 31vw;
     height: 20vw;
+}
+
+
+.dropdownBoxButton
+{
+    transition-duration: 0.4s;
+    border: 3px black solid;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 80%);
+}
+
+.dropdownBoxButton:hover
+{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+/*classes for the drop down arrows*/
+.arrow
+{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.down
+{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/*style forthe container and individual instances of checkboxes*/
+#CheckboxesHolder
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.checkboxLabel
+{
+    margin: 0 5px 0;
+}
+
+.checkbox
+{
+    width: 15px;
+    height: 15px;
+    font-size: large;
+    text-align: center;
+}
+
+h2
+{
+    text-align: center;
 }
