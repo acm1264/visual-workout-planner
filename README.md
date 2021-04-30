@@ -34,7 +34,7 @@ netlify init
 When running `netlify init`, request it to use the site hosted at the repo in order to establish the connection properly.
 
 ## App Functionality
-PLACEHOLDER
+Click on a muscle on the main muscle structure images or using the optoinal extra buttons to toggle the exercises for that muscle on/off (green means on, red means off). The exercises will display at the bottom of the page. To view more information on an exercise, click the dropdown button on it. To show/hide certain exercises based on if they are a stretch or not, click one of the filter checkboxes located directly above the exercise display.
 
 ## File Organization
 Types of files are organized into folders as described:

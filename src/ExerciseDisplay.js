@@ -51,7 +51,7 @@ function findPos(obj) {
 export const scrollToExercise = () =>
 {
   window.scrollTo({
-        top: findPos(document.getElementById("Checkboxes"))-450,
+        top: findPos(document.getElementById("CheckboxesHolder"))-450,
         left: 0, 
         behavior: 'smooth',
     })
@@ -103,14 +103,15 @@ export default class ExerciseDisplay extends React.Component
 
         {/* functionality for the checklist options is inside the exercise box display so it can be used by the display to
         update what content is/is not shown */}
-        <div id="Checkboxes">
-          <label>
-            <input type="checkbox" name="Stretches" checked={showStretches} onClick={this.ToggleStretchDisplay.bind()}/>
+        <h2>Filter Exercises by Category</h2>
+        <div id="CheckboxesHolder">
+          <label className="checkboxLabel">
+            <input type="checkbox" name="Stretches" className="checkbox" checked={showStretches} onClick={this.ToggleStretchDisplay.bind()}/>
             Stretches
           </label>
 
-          <label>
-            <input type="checkbox" name="NonStretches" checked={showNonStretches} onClick={this.ToggleNonStretchDisplay.bind()}/>
+          <label className="checkboxLabel">
+            <input type="checkbox" name="NonStretches" className="checkbox" checked={showNonStretches} onClick={this.ToggleNonStretchDisplay.bind()}/>
             Non-Stretches
           </label>
         </div>
@@ -129,9 +130,20 @@ export default class ExerciseDisplay extends React.Component
                 <h1><img src="dumbellFavicon_16x16px.png" alt="dumbell 1"/> {exercise.Exercise_Name} <img src="dumbellFavicon_16x16px.png" alt="dumbell 2"/></h1>
                 <p className="muscleNameInBox">{exercise.Primary_Muscle_Name}</p>
                 
-                <p><button className="contentInBoxTitle" onClick={this.ToggleContentVisibility.bind(this)}>Description: </button> <div className="contentInBox hideContentInBox">{exercise.Description}</div></p>
-                <p><button className="contentInBoxTitle" onClick={this.ToggleContentVisibility.bind(this)}>Helpful Tips: </button> <div className="contentInBox hideContentInBox">{exercise.Form_Tips}</div></p>
-                <p><button className="contentInBoxTitle" onClick={this.ToggleContentVisibility.bind(this)}>Video: </button> <div className="contentInBox hideContentInBox"><iframe title="Video" width="420" height="315" src={exercise.Video} id="Video"/></div></p>
+                
+                <button className="contentInBoxTitle dropdownBoxButton" onClick={this.ToggleContentVisibility.bind(this)}>Toggle Info <i class="arrow down"></i></button> 
+                <div className="contentInBox hideContentInBox">
+                  <h2>Description:</h2>
+                  <div className="contentInBox">{exercise.Description}</div>
+
+                  <h2>Form Tips:</h2>
+                  <div className="contentInBox">{exercise.Form_Tips}</div>
+
+                  <h2>Video Demonstration:</h2>
+                  <div className="contentInBox"><iframe title="Video" width="420" height="315" src={exercise.Video} className="video"/></div>
+                </div>
+                
+                
               </div>
             </div>  
           ))}
