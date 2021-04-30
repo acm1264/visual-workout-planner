@@ -17,3 +17,24 @@
 .MuscleInactive {
     background-color: #cc3232;
 }
+
+
+.muscleButton
+{
+    color: white;
+}
+
+#buttonsHolder, .buttonSubgroup
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonHolderHolder
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
